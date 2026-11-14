@@ -1,0 +1,152 @@
+body {
+    background: linear-gradient(to bottom, #8e0c13, #4d0609, #1b0001);
+    min-height: 110vh;
+    font-family: sans-serif;
+    padding: 20px; /* Evita que os elementos encostem nas bordas da tela */
+    margin: 0;
+}
+
+.capa-album {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.titulo {
+    font-size: 25px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    color: white;
+    font-style: italic;
+}
+
+.informacoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: -10px;
+}
+
+.informacoes img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nome-perfil {
+    font-size: 15px;
+    margin: 0;
+    color: white;
+}
+
+.tempo {
+    font-size: 15px;
+    margin-top: 15px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* --- Barra de Botões e Ações --- */
+
+.botao {
+    display: flex;
+    justify-content: space-between; /* Separa o grupo da esquerda do Play na direita */
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.acoes-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botao-enriquecer {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.download,
+.adicionar-pessoas,
+.reticencias {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.play {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+/* --- Lista de Músicas --- */
+
+.lista-musicas {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.lista-musicas img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #242424;
+}
+
+.musica1{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+ .musica1 img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.musica1 .info1{
+    width: 28px;
+    height: 28px;
+    margin-left: auto;    
+}
+
+.musica2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+ .musica2 img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.musica2 .info{
+    width: 28px;
+    height: 28px;
+    margin-left: auto;    
+}

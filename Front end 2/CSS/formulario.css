@@ -1,0 +1,74 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #3C373F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    color: #B4C7CA;
+    width: 260px;
+}
+
+.titulo{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+
+.nome{
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.idade{
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.email{
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.botao{
+    width: 240px;
+    height: 20px;
+    font-weight: 900;
+    background-color: #7D8983;
+    color: #d3d3c8;
+}
+
+.saida{
+    background-color: #88a898;
+    color: #1E2B24;
+    height: 160p;
+    width: auto;
+    border-radius: 2%;
+    display:flex;
+    flex-direction: row;
+    font-weight: 900;
+}
+
+.spanNome{
+    display: flex;
+    flex-direction: column;
+    color: red;
+    margin-bottom: -20px;
+
+}
+
+.spanIdade{
+    display: flex;
+    flex-direction: column;
+    color: red;
+    margin-bottom: -20px;
+}
+
+.spanEmail{
+    display: flex;
+    flex-direction: column;
+    color: red
+}

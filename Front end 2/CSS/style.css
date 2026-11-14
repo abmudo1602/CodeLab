@@ -1,0 +1,39 @@
+body{
+    align-items: center;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    font-family:'Times New Roman', Times, serif
+}
+
+.pai{
+    flex-direction: column;
+}
+
+.texto{
+    margin-bottom: 5px;
+}
+
+
+.caixa4{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.senha{
+    margin-top: 10px;
+}
+
+.botao{
+    width: 235px;
+    font-style:italic;
+    font-weight:900;
+    background-color: rgb(1, 255, 1);
+    border: 3px solid
+}
+
+.itexto, .isenha{
+    font-weight:900;
+    font-style:italic;
+}

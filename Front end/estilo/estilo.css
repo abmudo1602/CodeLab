@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Redaction+20:ital,wght@0,400;0,700;1,400&display=swap');
+
+.nome{
+    color: #B11313;
+    font-family: 'redaction 20', sans-serif;
+}
+
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.subtitulo{
+    letter-spacing: 4px;
+    color: #447BBE;
+}
+
+.linha{
+    height: 1px;
+    background-color: #1b32c7;
+    border: none;
+    width: 20%;
+}
+
+.convite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 35px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: black;
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.convite::before {
+    content: "✦       ✧          ✦\A     ✧         ✦       ✧\A ✦          ✧          ✦\A      ✦        ✧        ✦\A ✧         ✦          ✧\A      ✧         ✦";
+    white-space: pre;
+    position: absolute;
+    inset: 0;
+    color: #9D00FF;
+    font-size: 18px;
+    line-height: 65px;
+    letter-spacing: 8px;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.convite::after {
+    content: "✧        ✦        ✧\A    ✦        ✧        ✦\A ✧        ✦        ✧\A       ✧        ✦\A ✦        ✧        ✦\A    ✦        ✧";
+    white-space: pre;
+    position: absolute;
+    inset: 0;
+    color: #FFDE21;
+    font-size: 16px;
+    line-height: 65px;
+    letter-spacing: 8px;
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.convite > * {
+    position: relative;
+    z-index: 1;
+}
+
+.data{
+    color: #DF1F2D;
+}

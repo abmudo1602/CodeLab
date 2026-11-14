@@ -1,0 +1,40 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+body {
+    margin: 0;                 /* Remove as margens padrão do navegador */
+    min-height: 100vh;         /* Garante que o body ocupe toda a altura da tela */
+    display: flex;             /* Ativa o Flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    background-color: #f0f0f0; /* Cor de fundo opcional apenas para contraste */
+}
+
+.convite-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 400px;
+}
+
+.detalhes-evento {
+  font-weight: bold;
+  color: #333;
+}
+
+.botao-confirmar {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+}
+
+.destaque {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
