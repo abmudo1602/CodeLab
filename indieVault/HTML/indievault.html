@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieVault | Cadastro</title>
+    <link rel="stylesheet" href="../CSS/indieVault.css">
+</head>
+<body>
+    <div class="geral">
+        <h1 class="titulo">Indie Vault</h1>
+
+        <div class="formulario">
+            <form class="cadastro">
+
+                <div class="nome">
+                    <label class="spanNome" for="inputNome">Nome</label>
+                    <br>
+                    <input
+                        class="styleNome"
+                        id="inputNome"
+                        name="nome"
+                        placeholder="Insira seu nome"
+                        type="text"
+                        enterkeyhint="next"
+                        required
+                    >
+                </div>
+
+                <div class="nomeDeUsuario">
+                    <label class="spanNomeDeUsuario" for="inputNomeDeUsuario">Nome de usuário</label>
+                    <br>
+                    <input
+                        class="styleNomeUsuario"
+                        id="inputNomeDeUsuario"
+                        name="nomeDeUsuario"
+                        placeholder="Insira seu nome de usuário"
+                        type="text"
+                        enterkeyhint="next"
+                        required
+                    >
+                </div>
+
+                <div class="email">
+                    <label class="spanEmail" for="inputEmail">E-mail</label>
+                    <br>
+                    <input
+                        class="styleEmail"
+                        id="inputEmail"
+                        name="email"
+                        placeholder="Insira seu e-mail"
+                        type="email"
+                        enterkeyhint="next"
+                        required
+                    >
+                    <span id="spanErroEmail"></span>
+                </div>
+
+                <div class="senha">
+                    <label class="spanSenha" for="inputSenha">Senha</label>
+                    <br>
+                    <input
+                        class="styleSenha"
+                        id="inputSenha"
+                        name="senha"
+                        placeholder="Digite uma senha"
+                        type="password"
+                        enterkeyhint="next"
+                        required
+                    >
+                    <span id="spanErroSenha" class="spanSenhaUsuario"></span>
+                    <small id="contadorSenha"></small>
+                </div>
+
+                <div class="confirmarSenha">
+                    <label class="spanConfirmarSenha" for="inputConfirmarSenha">Confirmar senha</label>
+                    <br>
+                    <input
+                        class="styleConfirmarSenha"
+                        id="inputConfirmarSenha"
+                        name="confirmarSenha"
+                        placeholder="Confirme sua senha"
+                        type="password"
+                        enterkeyhint="send"
+                        required
+                    >
+                </div>
+
+                <button class="butao" type="submit">Cadastrar</button>
+
+                <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+
+                <p id="saida">Aguardando dados...</p>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/indieVault.js"></script>
+</body>
+</html>

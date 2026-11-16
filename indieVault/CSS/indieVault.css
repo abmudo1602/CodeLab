@@ -1,0 +1,177 @@
+:root {
+    /* Cores principais */
+    --preto: #060606;
+    --chumbo: #3C373F;
+    --cinza: #676766;
+    --verde: #7D8983;
+    --azul: #B4C7CA;
+
+    /* Cores gamer */
+    --roxo: #321B46;
+    --roxo-eletrico: #7846A8;
+    --lilas: #A78BBE;
+
+    /* Textos */
+    --texto-principal: #B4C7CA;
+    --texto-secundario: #676766;
+    --texto-titulo: #A78BBE;
+    --texto-botao: #E9EAE9;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--preto);
+    color: var(--azul);
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* ===== ESTRUTURA PRINCIPAL ===== */
+
+.geral {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.formulario {
+width: 100%;
+max-width: 450px;
+
+background-color: var(--chumbo);
+
+padding: 35px;
+border-radius: 14px;
+
+border: 1px solid var(--cinza);
+box-shadow: 0 0 25px rgba(120, 70, 168, 0.12);
+}
+
+/* ===== FORMULÁRIO ===== */
+
+.cadastro {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+/* ===== Título ===== */
+
+.titulo {
+    color: var(--texto-titulo);
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+
+/* ===== INPUTS ===== */
+
+.styleNome,
+.styleNomeUsuario,
+.styleEmail,
+.styleSenha,
+.styleConfirmarSenha {
+    color: var(--cinza);
+}
+
+input::placeholder {
+    color: var(--texto-secundario);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+
+    background-color: var(--preto);
+    color: var(--texto-principal);
+
+    border: 1px solid var(--cinza);
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+.spanNome
+.spanNomeDeUsuario
+.spanEmail
+.spanSenha
+.spanConfirmarSenha{
+    color: var(--azul)
+}
+
+/* ===== BUTAO ===== */
+
+.butao {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.butao:hover {
+    background-color: var(--roxo);
+}
+
+/* ===== Label ===== */
+
+label {
+    color: var(--texto-principal);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ===== Links ===== */
+
+a {
+    color: var(--lilas);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+
+/* ===== Reponsividade ===== */
+
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    .formulario {
+        padding: 25px 20px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+}
+
+#contadorSenha {
+    display: block;
+    color: var(--azul);
+    font-size: 12px;
+    margin-top: 5px;
+}
