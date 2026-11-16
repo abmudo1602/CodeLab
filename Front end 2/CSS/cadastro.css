@@ -1,73 +1,190 @@
-body {
-    padding: 0;
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
     margin: 0;
-    height: 100vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button{
-    cursor: pointer
+body {
+    min-height: 100vh;
+    background-color: #060606;
+    color: #E9EAE9;
+    font-family: Cambria, Georgia, serif;
+    padding: 40px 6%;
 }
+
+/* ===== CABEÇALHO ===== */
 
 .x {
-    display: flex;
-    justify-content: center;
-    font-style: italic;
-    margin-bottom: -150px;
+    max-width: 1100px;
+    margin: 0 auto 45px;
 }
 
+.titulo {
+    color: #CACAB5;
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #676766;
+    padding-bottom: 15px;
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
 
 .pai {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    width: 100%;
-    height: 80%;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+/* ===== PAINÉIS ===== */
+
+.formulario,
+.lista {
+    background-color: #3C373F;
+    border: 1px solid #676766;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1;
+    min-height: 300px;
 }
+
+/* ===== FORMULÁRIO ===== */
 
 .cadastro {
-    width: 260px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 900;
+    gap: 18px;
 }
+
+.cadastro label {
+    color: #B4C7CA;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.cadastro input {
+    width: 100%;
+    padding: 13px;
+    background-color: #060606;
+    color: #E9EAE9;
+    border: 1px solid #676766;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.cadastro input:focus {
+    border-color: #7D8983;
+}
+
+.cadastro input::placeholder {
+    color: #7D8983;
+}
+
+/* ===== BOTÃO CADASTRAR ===== */
 
 .butao {
-    width: 180px;
-    height: auto;
-    font-weight: 900;
-    background-color: rgb(18, 246, 18);
-    border-radius: 5%;
+    margin-top: 8px;
+    padding: 13px;
+    background-color: #7D8983;
+    color: #060606;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-.lista {
-    width: 50%;
+.butao:hover {
+    background-color: #B4C7CA;
+    transform: translateY(-2px);
+}
+
+/* ===== LISTA DE USUÁRIOS ===== */
+
+.Lista-titulo {
+    color: #CACAB5;
+    font-size: 1.4rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #676766;
+}
+
+.listagem {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 12px;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px;
+    background-color: #060606;
+    border: 1px solid #676766;
+    border-radius: 5px;
+    color: #E9EAE9;
 }
 
-.Lista-titulo{
-    font-style: italic;
-    font-size: 30px
+/* ===== BOTÃO EXCLUIR ===== */
+
+li button {
+    border: none;
+    background: transparent;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
 }
 
-.listagem{
-    margin-top: -5px;
-
-    gap: 10px;
-    font-size: 18px;
+li button:hover {
+    color: #B4C7CA;
 }
 
-li{
-    list-style-type: circle;
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 700px) {
+    body {
+        padding: 25px 5%;
+    }
+
+    .pai {
+        flex-direction: column;
+    }
+
+    .formulario,
+    .lista {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 1.7rem;
+    }
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.usuario-email {
+    color: #7D8983;
+    font-size: 0.85rem;
 }
