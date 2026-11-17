@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="stylesheet" href="../CSS/enzo.css">
+</head>
+<body>
+    <div class="geral">
+
+        <form class="formulario">
+
+            <div class="randomizer1">
+                <label class="randomizador1" for="inputNumero1">Número mínimo</label>
+                <br>
+                <input 
+                    class="styleNumero1"
+                    id="inputNumero1"
+                    placeholder="Insira o número mínimo"
+                    type="number"
+                    step="1"
+                    required>
+
+                <!-- CORREÇÃO: ID padronizado para facilitar a identificação -->
+                <span id="erroMinimo"></span>
+            </div>
+
+            <div class="randomizer2">
+                <label class="randomizador2" for="inputNumero2">Número máximo</label>
+                <br>
+                <input 
+                    class="styleNumero2"
+                    id="inputNumero2"
+                    placeholder="Insira o número máximo"
+                    type="number"
+                    step="1"
+                    required>
+
+                <!-- CORREÇÃO: ID padronizado -->
+                <span id="erroMaximo"></span>
+            </div>
+            
+            <div class="quantidade">
+                <label class="quantificador" for="quantificador">Quantidade</label>
+                <br>
+                <input 
+                    class="quantidades"
+                    id="quantificador"
+                    placeholder="Insira a quantidade de números que deseja aleatorizar"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required>
+
+                <!-- CORREÇÃO: ID padronizado -->
+                <span id="erroQuantidade"></span>
+            </div>
+
+            <div class="caixa">
+                <button class="butao" id="comRepeticao" type="button">
+                    Com repetição
+                </button>
+
+                <button class="butao" id="semRepeticao" type="button">
+                    Sem repetição
+                </button>
+            </div>
+
+            <!-- Saída geral para mensagens de validação -->
+            <p id="saida">Aguardando...</p>
+
+        </form>
+
+        <div class="resultado" id="resultado">
+            <!-- Resultados aparecerão aqui -->
+        </div>
+
+    </div>
+
+    <script src="../JS/enzo.js"></script>
+</body>
+</html>

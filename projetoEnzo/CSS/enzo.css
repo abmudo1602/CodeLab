@@ -1,0 +1,188 @@
+/* ===== PALETA GURU ANT ===== */
+
+:root {
+    --fundo: #102B3A;
+    --secundarios: #174F65;
+    --destaque: #80518A;
+    --botoes: #E34B5A;
+    --contrastes: #F2C94C;
+    --textos: #F1E7F2;
+    --contornos: #17131F;
+    --superficie: #E9DFF0;
+}
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    background-color: var(--fundo);
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+
+
+.geral {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+/* ===== CARD DO RANDOMIZER ===== */
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+
+    background-color: var(--superficie);
+    border: 3px solid var(--contornos);
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    box-shadow: 8px 8px 0 var(--destaque);
+}
+
+/* ===== CAMPOS ===== */
+
+.randomizer1,
+.randomizer2,
+.quantidade {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.randomizador1,
+.randomizador2,
+.quantificador {
+    font-weight: bold;
+    color: var(--contornos);
+}
+
+.styleNumero1,
+.styleNumero2,
+.quantidades {
+    width: 100%;
+    padding: 12px;
+
+    border: 2px solid var(--secundarios);
+    border-radius: 8px;
+
+    background-color: white;
+    color: var(--contornos);
+
+    font-size: 14px;
+    outline: none;
+}
+
+.styleNumero1:focus,
+.styleNumero2:focus,
+.quantidades:focus {
+    border-color: var(--destaque);
+}
+
+/* ===== BOTÕES ===== */
+
+.caixa {
+    display: flex;
+    gap: 12px;
+}
+
+.butao {
+    flex: 1;
+    padding: 13px 8px;
+
+    border: 2px solid var(--contornos);
+    border-radius: 8px;
+
+    background-color: var(--botoes);
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.butao:hover {
+    background-color: var(--contrastes);
+    color: var(--contornos);
+    transform: translateY(-2px);
+}
+
+/* ===== MENSAGENS ===== */
+
+#saida {
+    text-align: center;
+    overflow-wrap: anywhere;
+    color: var(--contornos);
+}
+
+/* ===== RESULTADO ===== */
+
+.resultado {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    color: var(--textos);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* TABLETS */
+@media (max-width: 768px) {
+
+    .formulario {
+        max-width: 450px;
+        padding: 28px;
+    }
+
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+
+    body {
+        padding: 16px 10px;
+    }
+
+    .geral {
+        padding: 5px;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 22px 18px;
+        gap: 18px;
+    }
+
+    .caixa {
+        flex-direction: column;
+    }
+
+    .butao {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .resultado {
+        overflow-wrap: anywhere;
+    }
+
+}
