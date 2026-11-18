@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título no topo e lista descendo até o meio */
+.listagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+.titulo {
+  margin-bottom: 20px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+/* Área do formulário no centro da tela */
+.pai {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Coloca os dois blocos (Adicionar e Remover) lado a lado */
+.formulario {
+  display: flex;
+  flex-direction: row;     /* Alinha os grupos na horizontal */
+  gap: 30px;               /* Espaço entre o bloco Adicionar e o bloco Remover */
+}
+
+/* Coloca label, input e botão um embaixo do outro dentro de cada bloco */
+.grupo {
+  display: flex;
+  flex-direction: column;  /* Empilha label -> input -> botão */
+  align-items: center;
+  gap: 8px;                /* Espaço vertical entre label, input e botão */
+}

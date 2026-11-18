@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="../CSS/lista.css">
+</head>
+<body>
+    <div class="listagem">
+        <h1 class="titulo">Lista de compras</h1>
+        <ul id="lista-produtos" class="lista"></ul>
+    </div>
+
+    <div class="pai">
+        <form class="formulario">
+
+            <div class="grupo">
+                <label class="labelAdicionar" id="inputAdicionar">Adicionar</label>
+                <input id="input1">
+                <button onclick="adicionar()" id="butaoAdicionar" type="button">Adicionar</button>
+            </div>
+
+            <div class="grupo">
+                <label class="labelRemover" id="inputRemover">Remover</label>
+                <input id="input2">
+                <button onclick="remover()" id="butaoRemover" type="button">Remover</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../JS/lista.js"></script>
+</body>
+</html>
