@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="../CSS/TaskFlow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="caixona">
+
+        <form class="formulario">
+
+            <div class="caixaTitulo">
+                <h1 class="titulo">TaskFlow</h1>
+                <h3 class="subtitulo">
+                    Organize suas ideias, acompanhe seu progresso e tire seus planos do papel.
+                </h3>
+            </div>
+
+            <div class="conteudo">
+
+                <div class="painelFormulario">
+
+                    <div class="cardFormulario">
+
+                        <div class="campo">
+                            <label class="campoLabelTexto" for="campoTexto">
+                                Digite uma tarefa
+                            </label>
+
+                            <input
+                                class="campoInputTexto"
+                                id="campoTexto"
+                                type="text"
+                                enterkeyhint="next"
+                                name="tarefa"
+                                required>
+                        </div>
+
+                        <div class="descricao">
+                            <label class="campoLabelDescricao" for="campoDescricao">
+                                Digite uma breve descrição da sua tarefa
+                            </label>
+
+                            <input
+                                class="campoInputDescricao"
+                                id="campoDescricao"
+                                type="text"
+                                name="descricao"
+                                enterkeyhint="done">
+                        </div>
+
+                        <div class="caixaButao">
+                            <button class="butao" type="button" id="butao">
+                                Adicionar tarefa
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="painelLista">
+
+                    <div class="lista">
+                        <ul id="listaTarefas"></ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="../JS/TaskFlow.js"></script>
+
+</body>
+</html>

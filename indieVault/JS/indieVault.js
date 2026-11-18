@@ -17,6 +17,7 @@ const contadorSenha = document.getElementById('contadorSenha');
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    // CAPTURAR DADOS
     const nome = inputNome.value.trim();
     const nickName = inputNomeDeUsuario.value.trim();
     const email = inputEmail.value.trim();
@@ -42,7 +43,6 @@ formulario.addEventListener('submit', (event) => {
     if (
         email.startsWith("@") ||
         email.endsWith("@") ||
-        email.indexOf("@") === 0 ||
         email.lastIndexOf("@") !== email.indexOf("@")
     ) {
         spanErroEmail.innerText = 'Digite um email em formato válido';
@@ -64,11 +64,41 @@ formulario.addEventListener('submit', (event) => {
         return;
     }
 
+    // CRIAR OBJETO DO USUÁRIO
+    const usuario = {
+        nome,
+        nickName,
+        email,
+        senha
+    };
+
+    // RECUPERAR USUÁRIOS EXISTENTES
+    const dadosUsuarios = localStorage.getItem("usuarios");
+
+    // TRANSFORMAR EM ARRAY OU CRIAR UM VAZIO
+    let usuarios = dadosUsuarios ? JSON.parse(dadosUsuarios) : [];
+
+    // VERIFICAR EMAIL DUPLICADO
+    const usuarioExistente = usuarios.find(usuario => usuario.email === email);
+
+    if (usuarioExistente) {
+        saida.style.color = 'red';
+        saida.innerText = 'Este e-mail já está cadastrado!';
+        return;
+    }
+
+    // ADICIONAR NOVO USUÁRIO
+    usuarios.push(usuario);
+
+    // SALVAR ARRAY ATUALIZADO
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
     // CADASTRO VÁLIDO
     saida.style.color = 'green';
     saida.innerText = 'Dados preenchidos corretamente!';
 });
 
+// CONTADOR DE SENHA
 inputSenha.addEventListener('input', () => {
     const quantidade = inputSenha.value.length;
 
