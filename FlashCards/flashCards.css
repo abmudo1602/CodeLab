@@ -1,0 +1,325 @@
+:root {
+    --fundo: #F4F0E8;
+    --cartao: #FFFCF5;
+    --principal: #6558A5;
+    --secundaria: #A69BD4;
+    --destaque: #E9C46A;
+    --texto: #302D3B;
+    --texto-suave: #777382;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+main{
+    flex:1;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--principal);
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: var(--texto-suave);
+}
+
+/* BARALHO */
+.baralho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+    gap:20px
+}
+
+/* CARTAS */
+.carta {
+    width: 400px;
+    height: 250px;
+    perspective: 1000px;
+    position:relative;
+}
+
+.carta-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+}
+
+/* FACES */
+.carta-frente,
+.carta-verso,
+.carta-frente-especial,
+.carta-verso-especial {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+/* VERSOS */
+.carta-verso,
+.carta-verso-especial {
+    transform: rotateY(180deg);
+}
+
+/* ANIMAÇÃO */
+.virada {
+    transform: rotateY(180deg);
+}
+
+/* CARTA ESPECIAL */
+.carta.especial .carta-frente-especial {
+    background-color: var(--principal);
+    color: white;
+}
+
+.carta.especial .carta-verso-especial {
+    background-color: var(--secundaria);
+    color: white;
+}
+
+/* CARTA DE ESTUDO */
+.carta.estudo .carta-frente {
+    background-color: var(--cartao);
+}
+
+.carta.estudo .carta-verso {
+    background-color: var(--destaque);
+}
+
+/* BOTÕES */
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SUBTÍTULOS E TEXTOS */
+.carta p {
+    margin-top: 15px;
+}
+
+footer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SEÇÃO DE CRIAÇÃO */
+.secao-criar {
+    display: block;
+    width: min(90%, 600px);
+    margin: 50px auto;
+    padding: 35px;
+    background-color: var(--cartao);
+    border: 2px solid var(--secundaria);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(48, 45, 59, 0.08);
+}
+
+.secao-criar h2 {
+    color: var(--principal);
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+#formCartao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formCartao input,
+#formCartao textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #DDD6ED;
+    border-radius: 10px;
+    background-color: #F9F7FC;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+#formCartao input:focus,
+#formCartao textarea:focus {
+    border-color: var(--principal);
+    box-shadow: 0 0 0 3px rgba(101, 88, 165, 0.12);
+}
+
+#formCartao textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* BOTÃO DE ADICIONAR */
+#formCartao button {
+    background-color: var(--principal);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#formCartao button:hover {
+    background-color: var(--secundaria);
+    transform: translateY(-2px);
+}
+
+/* MENSAGEM */
+#saida {
+    font-size: 0.9rem;
+}
+
+/* CONTROLE DE VISIBILIDADE */
+.secao-criar.escondido,
+.escondido {
+    display: none;
+}
+
+#voltarMenu {
+    background-color: transparent;
+    color: var(--principal);
+    padding: 8px 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#voltarMenu:hover {
+    color: var(--secundaria);
+    background-color: transparent;
+}
+
+/* CONTAINER DOS CARTÕES DE ESTUDO */
+.cartas-estudo {
+    display: flex;
+    gap: 20px;
+
+    width: 420px;
+    padding: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+/* TAMANHO DOS CARTÕES */
+.cartas-estudo .carta {
+    flex: 0 0 400px;
+    scroll-snap-align: start;
+}
+
+/* PERSONALIZAÇÃO DA BARRA DE ROLAGEM */
+.cartas-estudo::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cartas-estudo::-webkit-scrollbar-thumb {
+    background-color: var(--secundaria);
+    border-radius: 10px;
+}
+
+.cartas-estudo::-webkit-scrollbar-track {
+    background-color: #E5E0ED;
+    border-radius: 10px;
+}
+
+/* ÁREA DOS CARTÕES */
+.area-cartas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* SETAS DE NAVEGAÇÃO */
+.seta {
+    background-color: var(--principal);
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.seta:hover {
+    background-color: var(--secundaria);
+    transform: scale(1.1);
+}
+
+.seta:disabled {
+    background-color: #C9C5D3;
+    color: #88838F;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+}
+
+.seta:disabled:hover {
+    background-color: #C9C5D3;
+}
+
+.excluir {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.excluir:hover {
+    background-color: #D9534F;
+}

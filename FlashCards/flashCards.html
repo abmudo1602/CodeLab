@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards</title>
+
+    <link rel="stylesheet" href="flashCards.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">FlashCards</h1>
+        <p class="subtitulo">Aprenda uma carta de cada vez.</p>
+    </header>
+
+    <main>
+
+        <section class="baralho">
+
+            <!-- Carta especial: Menu -->
+            <div class="carta especial" id="cartaMenu">
+
+                <div class="carta-inner">
+
+                    <div class="carta-frente-especial">
+                        <h2 class="titulo-carta">FlashCards</h2>
+                        <p>✦</p>
+                        <p>Clique para explorar</p>
+                    </div>
+
+                    <div class="carta-verso-especial">
+
+                        <h2 class="titulo-carta-verso">Menu</h2>
+
+                        <nav>
+                            <button type="button" data-secao="estudar">Estudar</button>
+                            <button type="button" data-secao="criar">Criar cartões</button>
+                            <button type="button" data-secao="colecoes">Coleções</button>
+                            <button type="button" data-secao="estatisticas">Estatísticas</button>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cartões de estudo -->
+            <div class="area-cartas">
+
+                <button type="button" id="voltarCarta" class="seta">
+                    ❮
+                </button>
+
+                <div class="cartas-estudo" id="cartasEstudo">
+                <!-- O JavaScript vai adicionar os cartões aqui -->
+                </div>
+
+                <button type="button" id="avancarCarta" class="seta">
+                ❯
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Seção de criação -->
+        <section class="secao-criar escondido" id="secaoCriar">
+
+            <h2>Criar novo cartão</h2>
+
+            <button type="button" id="voltarMenu">
+                ← Voltar ao menu
+            </button>
+
+            <form id="formCartao">
+
+                <input
+                    type="text"
+                    id="pergunta"
+                    placeholder="Digite a pergunta"
+                >
+
+                <textarea
+                    id="resposta"
+                    placeholder="Digite a resposta"
+                ></textarea>
+
+                <button type="submit">Adicionar cartão</button>
+
+                <span id="saida"></span>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>FlashCards • Aprenda no seu ritmo.</p>
+    </footer>
+
+    <script src="flashCards.js"></script>
+
+</body>
+</html>
