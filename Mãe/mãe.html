@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cris Paiva | Clientes</title>
+
+    <link rel="stylesheet" href="../Mãe/mãe.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img
+                src="../Mãe/imagens/LogoCrisPaiva.png"
+                alt="Cris Paya Personal Organizer"
+            >
+        </a>
+
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#" class="ativo">Clientes</a>
+        </nav>
+
+        <button class="botao-adicionar" id="butao" type="button">
+            <span>+</span>
+            Adicionar cliente
+        </button>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- INTRODUÇÃO -->
+        <section class="introducao">
+
+            <div class="introducao-texto">
+
+                <span class="subtitulo">GERENCIAMENTO</span>
+
+                <h1>Seus clientes<span>.</span></h1>
+
+                <p>
+                    Um espaço organizado para gerenciar seus clientes
+                    e acompanhar cada projeto.
+                </p>
+
+            </div>
+
+            <!-- CONTADOR -->
+            <div class="contador">
+
+                <div class="contador-icone">♧</div>
+
+                <div>
+                    <span class="contador-numero" id="contadorClientes">00</span>
+
+                    <span class="contador-texto">
+                        Clientes cadastrados
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PESQUISA -->
+        <section class="ferramentas">
+
+            <div class="pesquisa">
+
+                <span class="icone-pesquisa">⌕</span>
+
+                <input
+                    type="text"
+                    id="pesquisar"
+                    placeholder="Pesquisar cliente pelo nome..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTAGEM DE CLIENTES -->
+        <section class="secao-clientes">
+
+            <div class="titulo-secao">
+
+                <div>
+                    <h2>Todos os clientes</h2>
+                    <p>Seus cadastros e projetos</p>
+                </div>
+
+                <span class="etiqueta">CLIENTES</span>
+
+            </div>
+
+
+            <!-- OS CARDS SERÃO CRIADOS PELO JAVASCRIPT -->
+            <div class="grade-clientes" id="gradeClientes">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL DE CADASTRO -->
+    <div class="modal" id="modalCliente">
+
+        <div class="modal-conteudo">
+
+            <!-- CABEÇALHO DO MODAL -->
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <span class="subtitulo">NOVO CADASTRO</span>
+
+                    <h2>Adicionar cliente</h2>
+
+                    <p>
+                        Preencha as informações do novo cliente.
+                    </p>
+
+                </div>
+
+                <button
+                    class="fechar-modal"
+                    id="fecharModal"
+                    type="button"
+                    aria-label="Fechar modal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <form id="formCliente">
+
+                <div class="campo">
+
+                    <label for="nome">Nome completo *</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Ex: Maria Silva"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefone">Telefone</label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        placeholder="(00) 00000-0000"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="cliente@email.com"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="observacoes">Observações</label>
+
+                    <textarea
+                        id="observacoes"
+                        placeholder="Informações adicionais sobre o cliente..."
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+                <div class="modal-botoes">
+
+                    <button
+                        type="button"
+                        class="botao-cancelar"
+                        id="cancelarModal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="botao-salvar"
+                    >
+                        Salvar cliente
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../Mãe/mãe.js"></script>
+
+</body>
+</html>

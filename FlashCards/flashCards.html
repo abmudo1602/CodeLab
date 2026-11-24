@@ -88,13 +88,49 @@
                     placeholder="Digite a resposta"
                 ></textarea>
 
-                <button type="submit">Adicionar cartão</button>
-
+                <button type="submit" id="botaoEnviar">Adicionar cartão</button>
                 <span id="saida"></span>
 
             </form>
 
         </section>
+
+ <section class="secao-colecoes escondido" id="secaoColecoes">
+
+    <h2>Minhas coleções</h2>
+
+    <button type="button" id="voltarMenuColecoes">
+        ← Voltar ao menu
+    </button>
+
+    <button type="button" id="novaColecao">
+        + Nova coleção
+    </button>
+
+    <div id="formularioColecao" class="escondido">
+
+        <input
+            type="text"
+            id="nomeColecao"
+            placeholder="Nome da coleção"
+        >
+
+        <textarea
+            id="descricaoColecao"
+            placeholder="Descrição da coleção"
+        ></textarea>
+
+        <button type="button" id="butaoCriarColecao">
+            Criar coleção
+        </button>
+
+    </div>
+
+    <div class="lista-colecoes" id="listaColecoes">
+        <!-- Coleções serão adicionadas pelo JavaScript -->
+    </div>
+
+</section>
 
     </main>
 

@@ -61,7 +61,7 @@ main{
     width: 400px;
     height: 250px;
     perspective: 1000px;
-    position:relative;
+    position: relative;
 }
 
 .carta-inner {
@@ -322,4 +322,194 @@ footer{
 
 .excluir:hover {
     background-color: #D9534F;
+}
+
+/* BOTÃO DE EDITAR */
+.editar {
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    z-index: 3;
+
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.editar:hover {
+    background-color: var(--principal);
+}
+
+/* SEÇÃO DE COLEÇÕES */
+.secao-colecoes {
+    width: min(90%, 750px);
+    margin: 50px auto;
+    padding: 35px;
+    background-color: var(--cartao);
+    border: 1px solid #E5DFD3;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(48, 45, 59, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.secao-colecoes h2 {
+    color: var(--texto);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+/* CAMPOS DE CRIAÇÃO */
+#nomeColecao,
+#descricaoColecao {
+    width: 100%;
+    padding: 14px 16px;
+
+    background-color: #F8F6F0;
+    color: var(--texto);
+
+    border: 1px solid #D8D2C7;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+    transition: 0.25s;
+}
+
+#nomeColecao {
+    height: 48px;
+}
+
+#descricaoColecao {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#nomeColecao:focus,
+#descricaoColecao:focus {
+    border-color: var(--principal);
+    box-shadow: 0 0 0 3px rgba(101, 88, 165, 0.12);
+    background-color: white;
+}
+
+#nomeColecao::placeholder,
+#descricaoColecao::placeholder {
+    color: var(--texto-suave);
+}
+
+/* BOTÕES DA SEÇÃO */
+.secao-colecoes button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* CRIAR COLEÇÃO */
+#butaoCriarColecao {
+    background-color: var(--principal);
+    color: white;
+    align-self: flex-start;
+}
+
+#butaoCriarColecao:hover {
+    background-color: #51458F;
+    transform: translateY(-2px);
+}
+
+/* NOVA COLEÇÃO */
+#novaColecao {
+    background-color: var(--destaque);
+    color: var(--texto);
+    align-self: flex-start;
+}
+
+#novaColecao:hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+}
+
+/* VOLTAR AO MENU */
+#voltarMenuColecoes {
+    background-color: #EAE6DE;
+    color: var(--texto);
+    align-self: flex-start;
+}
+
+#voltarMenuColecoes:hover {
+    background-color: #DDD7CC;
+}
+
+/* ESPAÇO DAS COLEÇÕES */
+.lista-colecoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 15px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .secao-colecoes {
+        width: 94%;
+        padding: 22px;
+        margin: 25px auto;
+    }
+
+    .secao-colecoes h2 {
+        font-size: 1.5rem;
+    }
+}
+
+#formularioColecao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.card-colecao {
+    background-color: var(--cartao);
+    border: 1px solid #E5DFD3;
+    border-radius: 15px;
+    padding: 22px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.card-colecao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(48, 45, 59, 0.1);
+}
+
+.card-colecao h3 {
+    color: var(--principal);
+    margin-bottom: 10px;
+}
+
+.card-colecao p {
+    color: var(--texto-suave);
+    margin-bottom: 15px;
+}
+
+.card-colecao span {
+    color: var(--texto);
+    font-size: 0.85rem;
+    font-weight: bold;
 }
